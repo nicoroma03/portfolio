@@ -46,6 +46,7 @@
 
 .box:hover{
   background-color: var(--accent-color-one);
+  filter: url(#glitch);
 }
 
 .box-title{
@@ -62,4 +63,6 @@ iframe{
   width:100%;
   height:100%;
   border:none;
+  overflow:auto;
+  pointer-events: none;
 }

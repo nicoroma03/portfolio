@@ -9,26 +9,12 @@
     "project"
     "project";
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(6, 1fr); 
+  grid-template-rows: repeat(6, auto); 
   box-sizing: border-box;
 }
 .box {
   background-color: var(--bg-color-one); 
   padding: 2em;
-}
-
-.spacer {
-  aspect-ratio: 900/600;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.layer1{
-  background-image: url('./assets/layered-waves-haikei.svg')
-}
-.layer2{
-  background-image: url('./assets/layered-waves-haikei-2.svg')
 }
 
 .project { grid-area: project; }

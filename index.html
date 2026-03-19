@@ -1,28 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="base-style.css" rel="stylesheet" />
-    <link href="index-style.css" rel="stylesheet" />
-    <title>My Portfolio</title>
-</head>
-<body>
-		<div class="header"><strong>Nicola Romano</strong></div>
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href="base-style.css" rel="stylesheet" />
+				<link href="index-style.css" rel="stylesheet" />
+				<title>My Portfolio</title>
+		</head>
+		<body>
+				<div class="header"><strong>Nicola Romano</strong></div>
 
-  <div class="main">
-    <div class="container">
-			<div class="box project">
-			<a style="color:white; width:100%; height:100%; text-decoration:none; overflow:hidden" href="file:///home/nicola/code/personal/portfolio/projects.html">
-			      <div class="box-title"><span>projects</span></div>
-			      <iframe scrolling="no" src="projects.html#main"></iframe>
-			</a>
-			</div>
-      <div class="box timeline"><div class="box-title">timeline</div></div>
-      <div class="box certification"><div class="box-title">cert</div></div>
-      <div class="box myself"><div class="box-title">myself</div></div>
-    </div>
-  </div>
+				<div class="main">
+						<div class="container">
+								<div class="box project">
+										<a style="color:white; width:100%; height:100%; text-decoration:none; overflow:hidden" href="file:///home/nicola/code/personal/portfolio/projects.html">
+												<div class="box-title"><span>projects</span></div>
+												<iframe scrolling="no" src="projects.html#main"></iframe>
+										</a>
+								</div>
+								<div class="box timeline">
+										<div class="box-title"><span>timeline</span></div>
+								</div>
+								<div class="box certification">
+										<a style="color:white; width:100%; height:100%; text-decoration:none; overflow:hidden" href="file:///home/nicola/code/personal/portfolio/certifications.html">
+												<div class="box-title"><span>certifications</span></div>
+												<iframe scrolling="no" src="certifications.html#main"></iframe>
+										</a>
+								</div>
+								<div class="box myself"><div class="box-title">myself</div></div>
+						</div>
+				</div>
 
-  <div class="footer">footer</div>
-</body></html>
+				<div class="footer">footer</div>
+
+				<svg style="position:absolute;width:0;height:0">
+						<defs>
+						<filter id="glitch">
+
+						<feComponentTransfer in="SourceGraphic" result="red">
+								<feFuncR type="identity" />
+								<feFuncG type="discrete" tableValues="0"/>
+								<feFuncB type="discrete" tableValues="0"/>
+								<feFuncA type="identity" />
+						</feComponentTransfer>
+
+						<feComponentTransfer in="SourceGraphic" result="green">
+								<feFuncR type="discrete" tableValues="0"/>
+								<feFuncG type="identity" />
+								<feFuncB type="discrete" tableValues="0"/>
+								<feFuncA type="identity" />
+						</feComponentTransfer>
+
+						<feComponentTransfer in="SourceGraphic" result="blue">
+								<feFuncR type="discrete" tableValues="0"/>
+								<feFuncG type="discrete" tableValues="0"/>
+								<feFuncB type="identity" />
+								<feFuncA type="identity" />
+						</feComponentTransfer>
+
+						<feOffset in="red"   result="red-shifted"   dx="0"  dy="0">
+								<animate
+										attributeName="dx"
+										values="0;0;0;6;0;0;-3;0;0;3;0;0;0;0;-5;0;2;0;0;0;0"
+										dur="2.0s"
+										repeatCount="indefinite"
+										calcMode="discrete"
+								/>
+						</feOffset>
+						<feOffset in="green" result="green-shifted" dx="0"  dy="0" >
+								<animate
+										attributeName="dx"
+										values="0;2;1;0;0;-3;0;6;0;0;0;2;0;0;5;0;2;0;0;0;0"
+										dur="2.0s"
+										repeatCount="indefinite"
+										calcMode="discrete"
+								/>
+						</feOffset>
+						<feOffset in="blue"  result="blue-shifted"  dx="0" dy="0" >
+								<animate
+										attributeName="dx"
+										values="5;0;0;0;-5;0;0;3;0;0;-3;0;0;6;0;0;0;-6;0;0;0"
+										dur="2.0s"
+										repeatCount="indefinite"
+										calcMode="discrete"
+								/>
+						</feOffset>
+
+						<feBlend in="red-shifted"  in2="green-shifted" result="rg"    mode="screen" />
+						<feBlend in="rg"           in2="blue-shifted"  result="final" mode="screen" />
+
+						</filter>
+						</defs>
+				</svg>
+		</body>
+</html>

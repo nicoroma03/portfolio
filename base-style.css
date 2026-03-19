@@ -23,6 +23,16 @@ body {
   border: 1px solid var(--bg-color-two);
   padding: 1em;
   width:100%;
+  box-sizing: border-box;
+}
+.header a{
+  float:right;
+  text-decoration:none;
+  color:white;
+}
+
+.header a:hover{
+  color:var(--accent-color-one);
 }
 
 .main {
