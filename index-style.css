@@ -12,12 +12,13 @@
   box-sizing: border-box;
 }
 
+
 @media(max-width: 100em){
   .container{
     grid-template-areas:
-      "project project timeline timeline"
+      "project project myself myself"
       "project project certification certification"
-      "myself myself myself myself";
+      "timeline timeline timeline timeline";
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr); 
   }
@@ -27,9 +28,9 @@
   .container{
     grid-template-areas:
       "project" 
-      "timeline"
       "certification"
-      "myself";
+      "myself"
+      "timeline";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr); 
   }
@@ -52,6 +53,8 @@
 .box-title{
   width:100%;
   margin-bottom:1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 .project { grid-area: project; }
@@ -65,4 +68,5 @@ iframe{
   border:none;
   overflow:auto;
   pointer-events: none;
+  flex-grow:1;
 }

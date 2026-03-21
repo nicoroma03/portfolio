@@ -1,27 +1,42 @@
 .container {
-  display: grid;
-  width:100%;
-  height:100%;
-  grid-template-areas:
-    "cert cert"
-    "cert cert"
-    "cert cert";
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr); 
+  background-color: var(--bg-color-four);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate360 12s infinite forwards linear;
+}
+
+.carousel-face {
+  position: absolute;
+  width: 300px;
+  height: 200px;
   box-sizing: border-box;
-  column-gap: 2em;
-  row-gap: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  transform-style: preserve-3d; 
 }
 
-.box {
-  background-color: var(--bg-color-one); 
-  padding: 2em;
+.carousel-face img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.certification { grid-area: certification; }
-
-img {
-  padding-top:10%;
-  width:90%;
-  height:90%;
-} 
+@keyframes rotate360 {
+  from { transform: rotateY(  0deg); }
+  to   { transform: rotateY(-360deg); }
+}
