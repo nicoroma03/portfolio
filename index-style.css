@@ -32,7 +32,7 @@
       "myself"
       "timeline";
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, minmax(400px,auto)); 
   }
 }
 
