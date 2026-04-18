@@ -29,7 +29,6 @@ body {
   background-color: var(--bg-color-one);
   grid-template-rows: auto 1fr auto;
   color: var(--text-color-one);
-  overflow: hidden;
 }
 
 .header,
@@ -40,13 +39,37 @@ body {
   width:100%;
   box-sizing: border-box;
 }
+.header{
+  display: block;
+}
+.footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer a{
+  color:var(--text-color-one);
+  text-decoration:none;
+  margin-right:30px;
+  white-space: nowrap;
+}
+.footer strong{
+  margin-right:30px;
+}
+.footer span{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .header a{
   float:right;
   text-decoration:none;
   color:white;
 }
 
-.header a:hover{
+.header a:hover,
+.footer a:hover{
   color:var(--accent-color-one);
 }
 

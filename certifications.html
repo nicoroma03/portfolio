@@ -1,66 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="base-style.css" rel="stylesheet" />
-        <link href="certifications-style.css" rel="stylesheet" />
-        <title>My Portfolio</title>
-    </head>
-    <body>
-        <div class="header"><span>Certifications</span><a href="index.html">home</a></div>
-        <div id="main" class="container">
-            <div class="carousel">
-                <div class="carousel-face">
-                    <img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft -- AI 900">
-                </div>
-                <div class="carousel-face">
-                    <img src="assets/cambridge-b2.svg" alt="Microsoft -- AI 900">
-                </div>
-                <div class="carousel-face">
-                    <img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft -- AI 900">
-                </div>
-            </div>
-        </div>
-        <div class="footer">footer</div>
-    </body>
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href="base-style.css" rel="stylesheet" />
+				<link href="certifications-style.css" rel="stylesheet" />
+				<title>My Portfolio</title>
+		</head>
+		<body>
+				<div class="header"><span>Certifications</span><a href="index.html">home</a></div>
+				<div id="main" class="container">
+						<div class="carousel">
+								<div class="carousel-face">
+										<img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft -- AI 900">
+								</div>
+								<div class="carousel-face">
+										<img src="assets/cambridge-b2.svg" alt="Microsoft -- AI 900">
+								</div>
+								<div class="carousel-face">
+										<img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft -- AI 900">
+								</div>
+						</div>
+				</div>
+				<div class="footer">
+						<strong>contacts:</strong>
+						<a href="mailto:info@ronik.ch"><span>[</span>info@ronik.ch<span>]</span></a>
+						<a href="https://www.github.com/ronik-dev"><span>[</span>github.com/ronik-dev<span>]</span></a>
+						<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span>[</span>linkedin.com/in/nicola-romano-351461385<span>]</span></a>
+				</div>
+		</body>
 
-<script>
-		// TO ROTATE THE CERTIFICATIONS
-		const carousel = document.querySelector('.carousel');
-		const faces = document.querySelectorAll('.carousel-face');
-		const imgs = document.querySelectorAll('.carousel-face img');
-		const n = faces.length;
-		const duration = n * 4000; // 4 seconds per face
-		
-		// position faces evenly and set the radius automatically
-		const angleStep = 360 / n;
-		const radius = 42 + Math.round((300 / 2) / Math.tan(Math.PI / n));
-		
-		faces.forEach((face, i) => {
-		  const offset = i * angleStep;
-		  face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
-		});
-		
-		const startTime = Date.now();
-		
-		function tick() {
-		  const angle = (((Date.now() - startTime) % duration) / duration) * 360;
-		  carousel.style.transform = `rotateY(${-angle}deg)`;
-		  imgs.forEach((img, i) => {
-		    img.style.transform = `rotateY(${angle - i * angleStep}deg)`;
-		  });
-		  requestAnimationFrame(tick);
-		}
-		
-		requestAnimationFrame(tick);
+		<script>
+				// TO ROTATE THE CERTIFICATIONS
+				const carousel = document.querySelector('.carousel');
+				const faces = document.querySelectorAll('.carousel-face');
+				const imgs = document.querySelectorAll('.carousel-face img');
+				const n = faces.length;
+				const duration = n * 4000; // 4 seconds per face
 
-		// to resize when embedded as iframe	
-		if (window.self !== window.top) {
-		  document.querySelector('.header').style.display = 'none';
-		  document.querySelector('.footer').style.display = 'none';
-		  document.body.style.minHeight = 'unset'; 
-		  document.body.style.display = 'block';
-		}
-</script>
+				// position faces evenly and set the radius automatically
+				const angleStep = 360 / n;
+				const radius = 42 + Math.round((300 / 2) / Math.tan(Math.PI / n));
+
+				faces.forEach((face, i) => {
+						const offset = i * angleStep;
+						face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
+				});
+
+				const startTime = Date.now();
+
+				function tick() {
+						const angle = (((Date.now() - startTime) % duration) / duration) * 360;
+						carousel.style.transform = `rotateY(${-angle}deg)`;
+						imgs.forEach((img, i) => {
+								img.style.transform = `rotateY(${angle - i * angleStep}deg)`;
+						});
+						requestAnimationFrame(tick);
+				}
+
+				requestAnimationFrame(tick);
+
+				// to resize when embedded as iframe	
+				if (window.self !== window.top) {
+						document.querySelector('.header').style.display = 'none';
+						document.querySelector('.footer').style.display = 'none';
+						document.body.style.minHeight = 'unset'; 
+						document.body.style.display = 'block';
+				}
+		</script>
 </html>
