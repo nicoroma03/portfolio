@@ -28,6 +28,12 @@ body:has(#main:target) {
   animation: rotate360 12s infinite forwards linear;
 }
 
+@media(width<30em){
+  .carousel{
+    width:200px;
+  }
+}
+
 .carousel-face {
   position: absolute;
   width: 300px;

@@ -7,8 +7,8 @@
 				<link href="projects-style.css" rel="stylesheet" />
 				<title>My Portfolio - Projects</title>
 		</head>
+		<header><span>Projects</span><a href="index.html">home</a></header>
 		<body>
-				<div class="header"><span>Projects</span><a href="index.html">home</a></div>
 
 				<div id="main" class="container">
 						<div class="box">
@@ -119,20 +119,20 @@
 								</div>
 						</div>
 				</div>
-
-				<div class="footer">
-						<strong>contacts:</strong>
-						<a href="mailto:info@ronik.ch"><span>[</span>info@ronik.ch<span>]</span></a>
-						<a href="https://www.github.com/ronik-dev"><span>[</span>github.com/ronik-dev<span>]</span></a>
-						<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span>[</span>linkedin.com/in/nicola-romano-351461385<span>]</span></a>
-				</div>
 		</body>
+
+		<footer>
+				<strong>contacts:</strong>
+				<a href="mailto:info@ronik.ch"><span class="no-select">[</span>info@ronik.ch<span class="no-select">]</span></a>
+				<a href="https://www.github.com/ronik-dev"><span class="no-select">[</span>github.com/ronik-dev<span class="no-select">]</span></a>
+				<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>
+		</footer>
 
 		<script>
 				// Hide header and footer specifically when embedded in an iframe
 				if (window.self !== window.top) {
-						const header = document.querySelector('.header');
-						const footer = document.querySelector('.footer');
+						const header = document.querySelector('header');
+						const footer = document.querySelector('footer');
 						if (header) header.style.display = 'none';
 						if (footer) footer.style.display = 'none';
 

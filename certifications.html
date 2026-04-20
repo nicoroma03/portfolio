@@ -7,10 +7,10 @@
 				<link href="certifications-style.css" rel="stylesheet" />
 				<title>My Portfolio</title>
 		</head>
+		<header><span>Certifications</span><a href="index.html">home</a></header>
 		<body>
-				<div class="header"><span>Certifications</span><a href="index.html">home</a></div>
 				<div id="main" class="container">
-						<div class="carousel">
+						<div id="carousel" class="carousel">
 								<div class="carousel-face">
 										<img src="assets/microsoft-certified-fundamentals-badge.svg" alt="Microsoft -- AI 900">
 								</div>
@@ -22,13 +22,14 @@
 								</div>
 						</div>
 				</div>
-				<div class="footer">
-						<strong>contacts:</strong>
-						<a href="mailto:info@ronik.ch"><span>[</span>info@ronik.ch<span>]</span></a>
-						<a href="https://www.github.com/ronik-dev"><span>[</span>github.com/ronik-dev<span>]</span></a>
-						<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span>[</span>linkedin.com/in/nicola-romano-351461385<span>]</span></a>
-				</div>
 		</body>
+
+		<footer>
+				<strong>contacts:</strong>
+				<a href="mailto:info@ronik.ch"><span class="no-select">[</span>info@ronik.ch<span class="no-select">]</span></a>
+				<a href="https://www.github.com/ronik-dev"><span class="no-select">[</span>github.com/ronik-dev<span class="no-select">]</span></a>
+				<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>
+		</footer>
 
 		<script>
 				// TO ROTATE THE CERTIFICATIONS
@@ -40,8 +41,10 @@
 
 				// position faces evenly and set the radius automatically
 				const angleStep = 360 / n;
-				const radius = 42 + Math.round((300 / 2) / Math.tan(Math.PI / n));
-
+				var currentwidth = document.getElementById('carousel').offsetWidth;
+				console.log(currentwidth);
+				var radius = 42 + Math.round((currentwidth / 2) / Math.tan(Math.PI / n));
+				console.log(radius);
 				faces.forEach((face, i) => {
 						const offset = i * angleStep;
 						face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
@@ -62,8 +65,8 @@
 
 				// to resize when embedded as iframe	
 				if (window.self !== window.top) {
-						document.querySelector('.header').style.display = 'none';
-						document.querySelector('.footer').style.display = 'none';
+						document.querySelector('header').style.display = 'none';
+						document.querySelector('footer').style.display = 'none';
 						document.body.style.minHeight = 'unset'; 
 						document.body.style.display = 'block';
 				}

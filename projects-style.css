@@ -81,7 +81,7 @@ body:has(#main:target) .main {
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #dddddd;
+  color: var(--text-color-one);
   padding-left: 11px;
 }
 
