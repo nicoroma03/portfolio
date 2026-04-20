@@ -1,3 +1,4 @@
+
 body:has(#main:target) .header,
 body:has(#main:target) .footer {
   display: none;
@@ -6,6 +7,18 @@ body:has(#main:target) .footer {
 body:has(#main:target) {
   background-color: var(--bg-color-four);
   grid-template-rows: 1fr;
+  overflow:hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body:has(#main:target) .container::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body:has(#main:target) .container {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;     /* Firefox */
 }
 
 body:has(#main:target) .main {

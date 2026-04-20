@@ -33,18 +33,17 @@
 
 		<script>
 				// TO ROTATE THE CERTIFICATIONS
-				const carousel = document.querySelector('.carousel');
+				const carousel = document.querySelector('.carousel'); // Using the class selector
 				const faces = document.querySelectorAll('.carousel-face');
 				const imgs = document.querySelectorAll('.carousel-face img');
 				const n = faces.length;
-				const duration = n * 4000; // 4 seconds per face
+				const duration = n * 4000;
 
-				// position faces evenly and set the radius automatically
+				// Use the existing 'carousel' constant to get the width
+				const currentwidth = carousel.offsetWidth; 
 				const angleStep = 360 / n;
-				var currentwidth = document.getElementById('carousel').offsetWidth;
-				console.log(currentwidth);
-				var radius = 42 + Math.round((currentwidth / 2) / Math.tan(Math.PI / n));
-				console.log(radius);
+				const radius = 42 + Math.round((currentwidth / 2) / Math.tan(Math.PI / n));
+
 				faces.forEach((face, i) => {
 						const offset = i * angleStep;
 						face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
@@ -63,12 +62,26 @@
 
 				requestAnimationFrame(tick);
 
-				// to resize when embedded as iframe	
+				// To resize and center when embedded as an iframe	
 				if (window.self !== window.top) {
-						document.querySelector('header').style.display = 'none';
-						document.querySelector('footer').style.display = 'none';
-						document.body.style.minHeight = 'unset'; 
-						document.body.style.display = 'block';
+						// Hide header and footer
+						const header = document.querySelector('.header');
+						const footer = document.querySelector('.footer');
+						if (header) header.style.display = 'none';
+						if (footer) footer.style.display = 'none';
+
+						// 1. Force the body to be the full height of the iframe
+						document.body.style.height = '100vh';
+						document.body.style.margin = '0';
+
+						// 2. Change the grid to a single row so the container fills the screen
+						document.body.style.gridTemplateRows = '1fr'; 
+
+						// 3. Ensure the container expands to allow vertical centering
+						const container = document.querySelector('.container');
+						if (container) {
+								container.style.height = '100vh';
+						}
 				}
 		</script>
 </html>
