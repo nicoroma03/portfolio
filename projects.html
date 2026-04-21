@@ -140,5 +140,10 @@
 						document.body.style.gridTemplateRows = '1fr';
 						document.body.style.height = '100vh';
 				}
+				// Eventlistener for click event
+				window.addEventListener('click', () => {
+				  // Send a message to the parent window
+				  window.parent.postMessage('triggerLink', '*');
+				});
 		</script>
 </html>

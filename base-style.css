@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Intel One Mono"); 
+
 :root {
   --bg-color-one: black;
   --bg-color-opposite: white;
@@ -35,7 +37,8 @@ body {
   grid-template-rows: auto 1fr auto;
   color: var(--text-color-one);
   box-sizing: border-box;
-  overflow-x: hidden
+  overflow-x: hidden;
+  font-family: 'Intel One Mono', monospace;
 }
 
 body::-webkit-scrollbar {

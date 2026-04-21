@@ -102,4 +102,12 @@
 				<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>
 		</footer>
 
+		<script>
+				// link to projects
+				window.addEventListener('message', (event) => {
+				  if (event.data === 'triggerLink') {
+				    window.location.href = './projects.html'; 
+				  }
+				});
+		</script>
 </html>

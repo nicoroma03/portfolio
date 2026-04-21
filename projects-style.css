@@ -1,6 +1,5 @@
-
-body:has(#main:target) .header,
-body:has(#main:target) .footer {
+body:has(#main:target) header,
+body:has(#main:target) footer {
   display: none;
 }
 
