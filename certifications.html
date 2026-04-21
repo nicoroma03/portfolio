@@ -31,57 +31,42 @@
 				<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>
 		</footer>
 
-		<script>
-				// TO ROTATE THE CERTIFICATIONS
-				const carousel = document.querySelector('.carousel'); // Using the class selector
-				const faces = document.querySelectorAll('.carousel-face');
-				const imgs = document.querySelectorAll('.carousel-face img');
-				const n = faces.length;
-				const duration = n * 4000;
+<script>
+		// TO ROTATE THE CERTIFICATIONS
+		const carousel = document.querySelector('.carousel');
+		const faces = document.querySelectorAll('.carousel-face');
+		const imgs = document.querySelectorAll('.carousel-face img');
+		const n = faces.length;
+		const duration = n * 4000; // 4 seconds per face
+		
+		// position faces evenly and set the radius automatically
+		const angleStep = 360 / n;
+		const radius = 42 + Math.round((300 / 2) / Math.tan(Math.PI / n));
+		
+		faces.forEach((face, i) => {
+		  const offset = i * angleStep;
+		  face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
+		});
+		
+		const startTime = Date.now();
+		
+		function tick() {
+		  const angle = (((Date.now() - startTime) % duration) / duration) * 360;
+		  carousel.style.transform = `rotateY(${-angle}deg)`;
+		  imgs.forEach((img, i) => {
+		    img.style.transform = `rotateY(${angle - i * angleStep}deg)`;
+		  });
+		  requestAnimationFrame(tick);
+		}
+		
+		requestAnimationFrame(tick);
 
-				// Use the existing 'carousel' constant to get the width
-				const currentwidth = carousel.offsetWidth; 
-				const angleStep = 360 / n;
-				const radius = 42 + Math.round((currentwidth / 2) / Math.tan(Math.PI / n));
-
-				faces.forEach((face, i) => {
-						const offset = i * angleStep;
-						face.style.transform = `rotateY(${offset}deg) translateZ(${radius}px)`;
-				});
-
-				const startTime = Date.now();
-
-				function tick() {
-						const angle = (((Date.now() - startTime) % duration) / duration) * 360;
-						carousel.style.transform = `rotateY(${-angle}deg)`;
-						imgs.forEach((img, i) => {
-								img.style.transform = `rotateY(${angle - i * angleStep}deg)`;
-						});
-						requestAnimationFrame(tick);
-				}
-
-				requestAnimationFrame(tick);
-
-				// To resize and center when embedded as an iframe	
-				if (window.self !== window.top) {
-						// Hide header and footer
-						const header = document.querySelector('.header');
-						const footer = document.querySelector('.footer');
-						if (header) header.style.display = 'none';
-						if (footer) footer.style.display = 'none';
-
-						// 1. Force the body to be the full height of the iframe
-						document.body.style.height = '100vh';
-						document.body.style.margin = '0';
-
-						// 2. Change the grid to a single row so the container fills the screen
-						document.body.style.gridTemplateRows = '1fr'; 
-
-						// 3. Ensure the container expands to allow vertical centering
-						const container = document.querySelector('.container');
-						if (container) {
-								container.style.height = '100vh';
-						}
-				}
-		</script>
+		// to resize when embedded as iframe	
+		if (window.self !== window.top) {
+		  document.querySelector('.header').style.display = 'none';
+		  document.querySelector('.footer').style.display = 'none';
+		  document.body.style.minHeight = 'unset'; 
+		  document.body.style.display = 'block';
+		}
+</script>
 </html>

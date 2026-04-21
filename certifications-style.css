@@ -9,15 +9,16 @@ body:has(#main:target) {
   background-color: var(--bg-color-four); 
 }
 
-
 .container {
   background-color: var(--bg-color-four);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  perspective: 1000px;
+  perspective: 1200px;
+  perspective-origin: 50% 50%;
+  overflow: hidden;
 }
 
 .carousel {
@@ -25,13 +26,8 @@ body:has(#main:target) {
   width: 300px;
   height: 200px;
   transform-style: preserve-3d;
-  animation: rotate360 12s infinite forwards linear;
-}
-
-@media(width<30em){
-  .carousel{
-    width:200px;
-  }
+  /* This ensures the carousel rotates around its own center */
+  transform-origin: center center; 
 }
 
 .carousel-face {
@@ -46,7 +42,7 @@ body:has(#main:target) {
   transform-style: preserve-3d; 
 }
 
-.carousel-face img{
+.carousel-face img {
   width: auto;
   height: auto;
   max-width: 100%;
