@@ -7,7 +7,7 @@
 				<link href="projects-style.css" rel="stylesheet" />
 				<title>My Portfolio - Projects</title>
 		</head>
-		<header><span>Projects</span><a href="index.html">home</a></header>
+		<header><span>Projects</span><a href="index.html">[home]</a></header>
 		<body>
 
 				<div id="main" class="container">
@@ -21,11 +21,12 @@
 										</div>
 										<div class="desc-item">
 												<span class="label">Solution</span>
-												<p>Developed automated workflows using Ansible and Python to execute backups via SSH and APIs.</p>
+												<p>Developed automated workflows using Ansible and Python to execute backups via SSH and APIs.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
 										</div>
 								</div>
 								<div class="technologies">
-										<p>Ansible</p><p>Python</p><p>YAML</p><p>SSH</p>
+										<p>Ansible</p><p>Python</p><p>YAML</p><p>SSH</p><p class="closed-source">closed source</p>
+
 								</div>
 						</div>
 
@@ -39,14 +40,53 @@
 										</div>
 										<div class="desc-item">
 												<span class="label">Solution</span>
-												<p>Utilized Azure Automation, PowerShell 7, and Meraki APIs for automated reporting.</p>
+												<p>Utilized Azure Automation, PowerShell 7, and Meraki APIs for automated reporting.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
 										</div>
 								</div>
 								<div class="technologies">
-										<p>Azure Automation</p><p>PowerShell</p><p>Meraki API</p><p>Key Vault</p>
+										<p>Azure Automation</p><p>PowerShell</p><p>Meraki API</p><p>Key Vault</p><p class="closed-source">closed source</p>
+
 								</div>
 						</div>
 
+						<div class="box">
+								<div class="proj-image"><img src="public/mmgd-architecture.png" alt="Music Dashboard"></div>
+								<h3 class="title">Mig Music Generation Dashboard</h3>
+								<div class="description">
+										<div class="desc-item">
+												<span class="label">Goal</span>
+												<p>Refactor a research Python pipeline into a production-ready application. Deploy the result to an on-premises server.</p>
+										</div>
+										<div class="desc-item">
+												<span class="label">Solution</span>
+												<p>This project was developed in team with <a href="https://github.com/ImplacableOnion31">Fabian Tomasovic</a> for a bachelor semester project in <a href="https://www.supsi.ch/">SUPSI</a>.</br>We created a multi container application with Docker, used docker compose to orchestrate the containers and implemented GitLab CI/CD for deployment and exposed various endpoints to interact with the pipelines with FastAPI.</br>The platforms automates the full avaluation pipeline from reference audio to comparison of generated music. The system implements a four-stage pipeline and a web Dashboard provides researchesrs with an interactive interface to launch, run, monitor status, inspect generated audio and explore comparisons of model performance</p>
+										</div>
+								</div>
+								<div class="technologies">
+										<p>Python</p><p>Docker</p><p>GitLab CI/CD</p><p class="closed-source">closed source</p>
+										<p class="download"><a href="public/MMGD_REPORT_ROMANO_TOMASOVIC.pdf" download="MMGD_ROMANO_TOMASOVIC_REPORT.pdf">[Download report]</a></p>
+								</div>
+						</div>
+						<div class="box">
+                                <div class="proj-image"><img src="public/turbofan-engine.png" alt="NASA Turbofan Jet Engine"></div>
+                                <h3 class="title">NASA Turbofan Jet Engine — RUL Predictor</h3>
+                                <div class="description">
+                                        <div class="desc-item">
+                                                <span class="label">Goal</span>
+												<p>Predict the Remaining Useful Life (RUL) of jet engines using the NASA CMAPSS dataset to enable predictive maintenance.</br>Use Machine Learing Operations tools and deploy the solution in cloud environment</p>
+                                        </div>
+                                        <div class="desc-item">
+                                                <span class="label">Solution</span>
+                                                <p>Developed in collaboration with <a href="https://github.com/giadagaldiolo">Giada Galdiolo</a> for the <a href="https://www.supsi.ch/">SUPSI</a> MLOps 2026 course. 
+                                                Implemented a full MLOps pipeline featuring a RandomForest model with Raw Data Replay for continual learning. 
+                                                The system includes automated data validation with pytest, experiment tracking via MLflow, and a containerized FastAPI for real-time predictions.</p>
+                                        </div>
+                                </div>
+                                <div class="technologies">
+                                        <p>Python</p><p>MLflow</p><p>Docker</p><p>FastAPI</p><p>Scikit-Learn</p><p>GitHub Actions</p>
+                                        <p class="oss"><a href="https://github.com/giadagaldiolo/nasa-turbofan-jet-engine">[OSS: GitHub]</a></p>
+                                </div>
+                        </div>
 						<div class="box">
 								<div class="proj-image"><img alt="Copilot RAG"></div>
 								<h3 class="title">Multiagent Copilot RAG</h3>
@@ -57,11 +97,12 @@
 										</div>
 										<div class="desc-item">
 												<span class="label">Solution</span>
-												<p>Built with Copilot Studio, Azure AI Search, and OpenAI, using Azure Functions for backend logic.</p>
+												<p>Built with Copilot Studio, Azure AI Search, and OpenAI, using Azure Functions for backend logic.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
 										</div>
 								</div>
 								<div class="technologies">
-										<p>Copilot Studio</p><p>Azure AI Search</p><p>OpenAI</p><p>Azure Functions</p>
+										<p>Copilot Studio</p><p>Azure AI Search</p><p>OpenAI</p><p>Azure Functions</p><p class="closed-source">closed source</p>
+
 								</div>
 						</div>
 
@@ -75,11 +116,12 @@
 										</div>
 										<div class="desc-item">
 												<span class="label">Solution</span>
-												<p>Implemented C# .NET worker services and Azure Web Apps with Storage Accounts.</p>
+												<p>Implemented C# .NET worker services and Azure Web Apps with Storage Accounts.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
 										</div>
 								</div>
 								<div class="technologies">
-										<p>C# .NET</p><p>Azure Web Apps</p><p>Veeam API</p><p>Azure Storage</p>
+										<p>C# .NET</p><p>Azure Web Apps</p><p>Veeam API</p><p>Azure Storage</p><p class="closed-source">closed source</p>
+
 								</div>
 						</div>
 
@@ -93,36 +135,19 @@
 										</div>
 										<div class="desc-item">
 												<span class="label">Solution</span>
-												<p>Integrated Azure AI Language Service with Azure Logic Apps for execution and storage.</p>
+												<p>Integrated Azure AI Language Service with Azure Logic Apps for execution and storage.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
 										</div>
 								</div>
 								<div class="technologies">
-										<p>Logic Apps</p><p>Azure AI Language</p><p>Azure Storage</p>
-								</div>
-						</div>
+										<p>Logic Apps</p><p>Azure AI Language</p><p>Azure Storage</p><p class="closed-source">closed source</p>
 
-						<div class="box">
-								<div class="proj-image"><img alt="Music Dashboard"></div>
-								<h3 class="title">Mig Music Generation Dashboard</h3>
-								<div class="description">
-										<div class="desc-item">
-												<span class="label">Goal</span>
-												<p>Refactor a research Python pipeline into a production-ready application.</p>
-										</div>
-										<div class="desc-item">
-												<span class="label">Solution</span>
-												<p>Containerized the app with Docker and implemented GitLab CI/CD for deployment.</p>
-										</div>
-								</div>
-								<div class="technologies">
-										<p>Python</p><p>Docker</p><p>GitLab CI/CD</p><p>Dashboard</p>
 								</div>
 						</div>
 				</div>
 		</body>
 
 		<footer>
-				<strong>contacts:</strong>
+				<strong>contact me at:</strong>
 				<a href="mailto:info@ronik.ch"><span class="no-select">[</span>info@ronik.ch<span class="no-select">]</span></a>
 				<a href="https://www.github.com/ronik-dev"><span class="no-select">[</span>github.com/ronik-dev<span class="no-select">]</span></a>
 				<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>

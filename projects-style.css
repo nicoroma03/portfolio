@@ -119,6 +119,23 @@ body:has(#main:target) .main {
   margin: 0;
 }
 
+.technologies .download {
+  border: 1px solid green;
+  background-color: transparent;
+}
+
+.technologies .oss{
+  background-color: green;
+}
+
+.technologies .oss:hover{
+  background-color: lightgreen;
+}
+
+.technologies .closed-source{
+  background-color: #800404;
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 50em) {
   .proj-image { display: none; }
