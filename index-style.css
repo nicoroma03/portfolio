@@ -35,6 +35,9 @@
     grid-template-rows: repeat(4, minmax(300px,auto)); 
 	overflow:auto;
   }
+  .box {
+    padding:0.5em;
+  }
   .box span {
     display:none;
   }
