@@ -107,7 +107,6 @@ body{
   padding:1em;
 }
 
-
 .descriptions img{
   height:50px; 
 }
@@ -118,8 +117,20 @@ body{
   transition: max-height 0.3s ease;
 }
 
-.descriptions .cert-desc:hover .cert-text {
+.cert-toggle {
+  display: none;
+}
+
+.cert-toggle:checked + .cert-desc .cert-text {
   max-height: 100vh;
+}
+
+.cert-title {
+  cursor: pointer;
+}
+
+.cert-text {
+  cursor: pointer;
 }
 
 @keyframes rotate360 {
