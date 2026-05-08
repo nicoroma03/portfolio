@@ -56,7 +56,9 @@ body:has(#main:target) .main {
   border-bottom: 1px solid var(--bg-color-three);
   box-sizing: border-box;
 }
-
+.box:last-child{
+  border-bottom: 0px;
+}
 .box:nth-child(even) {
   grid-template-areas:
     "proj-image title"

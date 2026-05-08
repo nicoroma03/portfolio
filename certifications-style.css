@@ -1,4 +1,4 @@
-/* When the #main anchor is active (like in your iframe), hide header and footer */
+/* When the #main anchor is active (like in your iframe), hide header and footer and descriptions*/
 body:has(#main:target) .header,
 body:has(#main:target) .footer,
 body:has(#main:target) .cert-desc,
@@ -22,7 +22,7 @@ body:has(#main:target) {
   background-color: var(--bg-color-four); 
 }
 body{
-  background-color: var(--bg-color-one); 
+  background-color: var(--bg-color-four);
 }
 .grid{
   width: 100%;
@@ -41,7 +41,7 @@ body{
   heigth:100%; 
   flex-direction:column;
   justify-content:center;
-  margin:5em;
+  padding:5em;
 }
 
 .cert-desc{
@@ -109,6 +109,7 @@ body{
 
 .descriptions img{
   height:50px; 
+  margin-left:auto
 }
 
 .descriptions .cert-text {
@@ -125,11 +126,19 @@ body{
   max-height: 100vh;
 }
 
-.cert-title {
-  cursor: pointer;
+.cert-title p{
+  margin-left:auto;
 }
 
-.cert-text {
+.cert-title p::before {
+  content: "[expand]";
+}
+
+.cert-toggle:checked + .cert-desc .cert-title p::before {
+  content: "[collapse]";
+}
+
+.cert-title {
   cursor: pointer;
 }
 
@@ -151,12 +160,18 @@ body{
       "carousel"
       "descriptions";
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 0.5fr);
+    grid-template-rows: 1fr, auto;
   }
   .container{
     height: 30vh;
   }
   .descriptions .cert-text {
     max-height: 100vh;
+  }
+  .cert-title p{
+    display:none;
+  }
+  .descriptions img{
+    margin-left:0;
   }
 }
