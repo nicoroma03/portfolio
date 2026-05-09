@@ -131,11 +131,11 @@ body{
 }
 
 .cert-title p::before {
-  content: "[expand]";
+  content: "[v]";
 }
 
 .cert-toggle:checked + .cert-desc .cert-title p::before {
-  content: "[collapse]";
+  content: "[^]";
 }
 
 .cert-title {

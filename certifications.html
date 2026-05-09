@@ -3,11 +3,16 @@
 		<head>
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<script> if (localStorage.getItem('theme') === 'light') { document.documentElement.classList.add('light-theme'); } </script>
 				<link href="base-style.css" rel="stylesheet" />
+				<script src="base.js" defer></script>
 				<link href="certifications-style.css" rel="stylesheet" />
 				<title>My Portfolio</title>
 		</head>
-		<header><span>Certifications</span><a href="index.html">---> [home]</a></header>
+		<header>
+		  <span>Certifications</span>
+		  <a href="index.html">---> [home]</a>
+		</header>
 		<body>
 				<div class="grid">
 						<div id="main" class="container">
@@ -115,8 +120,10 @@
 
 				// to resize when embedded as iframe	
 				if (window.self !== window.top) {
-						document.querySelector('.header').style.display = 'none';
-						document.querySelector('.footer').style.display = 'none';
+						const header = document.querySelector('header');
+						const footer = document.querySelector('footer');
+						if (header) header.style.display = 'none';
+						if (footer) footer.style.display = 'none';
 						document.body.style.minHeight = 'unset'; 
 						document.body.style.display = 'block';
 				}

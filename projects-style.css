@@ -115,6 +115,7 @@ body:has(#main:target) .main {
 
 .technologies p {
   background-color: var(--accent-color-two);
+  color:white;
   border-radius: 5px;
   padding: 2px 5px;
   font-size: 0.8rem;
@@ -128,6 +129,11 @@ body:has(#main:target) .main {
 
 .technologies .oss{
   background-color: green;
+}
+
+
+.technologies .oss a{
+  color:white;
 }
 
 .technologies .oss:hover{

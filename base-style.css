@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Intel One Mono"); 
 
-:root {
+:root{
   --bg-color-one: black;
   --bg-color-opposite: white;
   --bg-color-two: #333333;
@@ -35,6 +35,8 @@ html{
 }
 
 a {
+  text-decoration:none; 
+  overflow:hidden;
   color: var(--text-color-one); 
   text-decoration: none;
 }
@@ -43,9 +45,9 @@ a:hover {
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(
     90deg,
-    var(--accent-color-one) 40%,
-    var(--text-color-one),
-    var(--accent-color-one) 60%
+    #285577 40%,
+    white,
+    #285577 60%
   );
   background-size: 300% 100%;
   -webkit-background-clip: text;
@@ -121,4 +123,30 @@ header a{
   height:100%;
   justify-content: center;
   align-items: center;
+}
+
+
+.theme-toggle{
+  display: none;
+}
+
+
+.theme-toggle-text::before{
+  content: "(day)";
+}
+
+.theme-toggle:checked + .theme-toggle-text::before{
+  content: "(night)";
+}
+
+html.light-theme body {
+  --bg-color-one: #ffffff;        /* Pure White */
+  --bg-color-opposite: #000000;
+  --bg-color-two: #f8fafc;        /* Very Light Blue-Grey */
+  --bg-color-three: #f1f5f9;      /* Light Slate */
+  --bg-color-four: #e2e8f0;       /* Defined Border/Section color */
+  --accent-color-one: #0284c7;    /* Bright Sky Blue */
+  --accent-color-two: #0c4a6e;    /* Deep Navy */
+  --text-color-one: #0f172a;      /* Slate Black */
+  --text-color-opposite: #ffffff;
 }
