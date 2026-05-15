@@ -6,14 +6,14 @@
 				<link href="base-style.css" rel="stylesheet" />
 				<script src="base.js" defer></script>
 				<link href="projects-style.css" rel="stylesheet" />
-				<title>My Portfolio - Projects</title>
+				<title>Software & Cloud Projects | Ronik Developer Portfolio</title>
+				<meta name="description" content="Hi! Here you can explore my software development and cloud projects. Loose yourself between automated cloud workflows, Docker and MLOps applications for SUPSI, and enterprise tools built for 4IT Solutions.">
 		</head>
-		<header>
-		  <span>Projects</span>
-		  <a href="index.html">---> [home]</a>
-		</header>
 		<body>
-
+				<header>
+						<span>Projects</span>
+						<a href="index.html">---> [home]</a>
+				</header>
 				<div id="main" class="container">
 						<div class="box">
 								<div class="proj-image"><img src="public/ansible-project-w.png" alt="Network Config Backup"></div>
@@ -72,27 +72,27 @@
 								</div>
 						</div>
 						<div class="box">
-                                <div class="proj-image"><img src="public/turbofan-engine.png" alt="NASA Turbofan Jet Engine"></div>
-                                <h3 class="title">NASA Turbofan Jet Engine — RUL Predictor</h3>
-                                <div class="description">
-                                        <div class="desc-item">
-                                                <span class="label">Goal</span>
+								<div class="proj-image"><img src="public/turbofan-engine.png" alt="NASA Turbofan Jet Engine"></div>
+								<h3 class="title">NASA Turbofan Jet Engine — RUL Predictor</h3>
+								<div class="description">
+										<div class="desc-item">
+												<span class="label">Goal</span>
 												<p>Predict the Remaining Useful Life (RUL) of jet engines using the NASA CMAPSS dataset to enable predictive maintenance.</br>Use Machine Learing Operations tools and deploy the solution in cloud environment</p>
-                                        </div>
-                                        <div class="desc-item">
-                                                <span class="label">Solution</span>
-                                                <p>Developed in collaboration with <a href="https://github.com/giadagaldiolo">Giada Galdiolo</a> for the <a href="https://www.supsi.ch/">SUPSI</a> MLOps 2026 course. 
-                                                Implemented a full MLOps pipeline featuring a RandomForest model with Raw Data Replay for continual learning. 
-                                                The system includes automated data validation with pytest, experiment tracking via MLflow, and a containerized FastAPI for real-time predictions.</p>
-                                        </div>
-                                </div>
-                                <div class="technologies">
-                                        <p>Python</p><p>MLflow</p><p>Docker</p><p>FastAPI</p><p>Scikit-Learn</p><p>GitHub Actions</p>
-                                        <p class="oss"><a href="https://github.com/giadagaldiolo/nasa-turbofan-jet-engine">[OSS: GitHub]</a></p>
-                                </div>
-                        </div>
+										</div>
+										<div class="desc-item">
+												<span class="label">Solution</span>
+												<p>Developed in collaboration with <a href="https://github.com/giadagaldiolo">Giada Galdiolo</a> for the <a href="https://www.supsi.ch/">SUPSI</a> MLOps 2026 course. 
+												Implemented a full MLOps pipeline featuring a RandomForest model with Raw Data Replay for continual learning. 
+												The system includes automated data validation with pytest, experiment tracking via MLflow, and a containerized FastAPI for real-time predictions.</p>
+										</div>
+								</div>
+								<div class="technologies">
+										<p>Python</p><p>MLflow</p><p>Docker</p><p>FastAPI</p><p>Scikit-Learn</p><p>GitHub Actions</p>
+										<p class="oss"><a href="https://github.com/giadagaldiolo/nasa-turbofan-jet-engine">[OSS: GitHub]</a></p>
+								</div>
+						</div>
 						<div class="box">
-								<div class="proj-image"><img alt="Copilot RAG"></div>
+								<div class="proj-image"><img src="public/copilot-rag-architecture.png" alt="Copilot RAG"></div>
 								<h3 class="title">Multiagent Copilot RAG</h3>
 								<div class="description">
 										<div class="desc-item">
@@ -111,7 +111,7 @@
 						</div>
 
 						<div class="box">
-								<div class="proj-image"><img alt="Backup Discovery"></div>
+								<div class="proj-image"><img src="public/backup-discovery-architecture.png" alt="Backup Discovery"></div>
 								<h3 class="title">Backup Discovery Platform</h3>
 								<div class="description">
 										<div class="desc-item">
@@ -121,6 +121,10 @@
 										<div class="desc-item">
 												<span class="label">Solution</span>
 												<p>Implemented C# .NET worker services and Azure Web Apps with Storage Accounts.</br>This project was commisoned by <a href="https://4itsolutions.com">4IT Solutions</a></p>
+										</div>
+										<div class="desc-item">
+												<span class="label">Disclaimer</span>
+												<p>This project was still in testing when i left it and has never gone to production</p>
 										</div>
 								</div>
 								<div class="technologies">
@@ -171,8 +175,8 @@
 				}
 				// Eventlistener for click event
 				window.addEventListener('click', () => {
-				  // Send a message to the parent window
-				  window.parent.postMessage('triggerLink', '*');
+						// Send a message to the parent window
+						window.parent.postMessage('triggerLink', '*');
 				});
 		</script>
 </html>
