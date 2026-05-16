@@ -163,10 +163,21 @@ html.light-theme body {
   --text-color-opposite: #ffffff;
 }
 
-
-@media(max-width:30em){
-  footer{ flex-direction: column; }
-  footer a { text-align:center; }
-  footer strong, .link-prefix {display:none;}
+.link-icon {
+  display: none;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  flex-shrink: 0;
 }
 
+@media(max-width: 50em) {
+  footer {
+    justify-content: center;
+    gap: 1.5em;
+  }
+  footer strong { display: none; }
+  footer a { margin-right: 0; }
+  .link-text { display: none; }
+  .link-icon { display: block; }
+}
