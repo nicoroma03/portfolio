@@ -57,23 +57,36 @@ a:hover {
 
 body {
   margin: 0;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   background-color: var(--bg-color-one);
   grid-template-rows: auto 1fr auto;
   color: var(--text-color-one);
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: 'Intel One Mono', monospace;
 }
 
-body::-webkit-scrollbar {
-  width: 8px;
-  display: block;
+body > *:not(header):not(footer):not(svg) {
+  overflow-y: auto;
 }
-body::-webkit-scrollbar-thumb {
+
+* {
+  scrollbar-width: thin;                                    /* Firefox */
+  scrollbar-color: var(--accent-color-two) transparent;    /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
   background: var(--accent-color-two);
   border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 header,
@@ -91,25 +104,24 @@ footer{
   display: flex;
   flex-wrap: wrap;
 }
-
-@media(max-width:30em){
-  footer{ flex-direction: column; }
-  footer a { text-align:center; }
-  footer strong, .link-prefix {display:none;}
-}
-
 footer a{
   margin-right:30px;
   white-space: normal;
   word-break: break-all;
 }
+
 footer strong{
   margin-right:30px;
 }
+
 footer span{
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.link-prefix{
+  user-select: text;
 }
 
 header a{
@@ -150,3 +162,11 @@ html.light-theme body {
   --text-color-one: #0f172a;      /* Slate Black */
   --text-color-opposite: #ffffff;
 }
+
+
+@media(max-width:30em){
+  footer{ flex-direction: column; }
+  footer a { text-align:center; }
+  footer strong, .link-prefix {display:none;}
+}
+

@@ -13,35 +13,6 @@
 }
 
 
-@media(max-width: 100em){
-  .container{
-    grid-template-areas:
-      "project project myself myself"
-      "project project certification certification"
-      "timeline timeline timeline timeline";
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr); 
-  }
-}
-
-@media(max-width: 50em){
-  .container{
-    grid-template-areas:
-      "project" 
-      "certification"
-      "myself"
-      "timeline";
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, minmax(300px,auto)); 
-	overflow:auto;
-  }
-  .box {
-    padding:0.5em;
-  }
-  .box span {
-    display:none;
-  }
-}
 
 .box {
   border: 1px solid var(--bg-color-three);
@@ -106,4 +77,37 @@ iframe{
 
 .theme-toggle-text{
   float: right;
+}
+
+@media(max-width: 100em){
+  .container{
+    grid-template-areas:
+      "project project myself myself"
+      "project project certification certification"
+      "timeline timeline timeline timeline";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr); 
+  }
+  .box {
+    padding:0.5em;
+  }
+}
+
+@media(max-width: 50em){
+  .container{
+    grid-template-areas:
+      "project" 
+      "certification"
+      "myself"
+      "timeline";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(300px,auto)); 
+	overflow:auto;
+  }
+  .box {
+    padding:0.5em;
+  }
+  .box span {
+    display:none;
+  }
 }

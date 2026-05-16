@@ -26,7 +26,7 @@ body{
 }
 .grid{
   width: 100%;
-  height: auto;
+  min-height: 0;
   margin:0;
   padding:0;
   display: grid;
@@ -38,9 +38,9 @@ body{
 .descriptions{
   grid-area: descriptions;
   display:flex;
-  heigth:100%; 
   flex-direction:column;
-  justify-content:center;
+  justify-content: safe center;
+  overflow-y: auto;
   padding:5em;
 }
 

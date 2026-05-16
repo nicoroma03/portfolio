@@ -1,0 +1,101 @@
+<html lang="en">
+		<head>
+				<meta charset="UTF-8">
+				<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<link href="base-style.css" rel="stylesheet" />
+				<script src="base.js" defer></script>
+				<link href="projects-style.css" rel="stylesheet" />
+				<title>Nicola Romano | Ronik Developer Portfolio</title>
+				<meta name="description" content="Get to know me!">
+		</head>
+		<body>
+				<header>
+						<span>Myself</span>
+						<a href="index.html">---> [home]</a>
+				</header>
+				<div class="container">
+
+						<div class="bio">
+								<div class="prompt-line"><span class="prompt">~$</span> <span class="cmd">whoami</span></div>
+								<div class="bio-output">
+										<p><span class="key">name</span><span class="sep">::</span> Nicola Romano</p>
+										<p><span class="key">location</span><span class="sep">::</span> Lugano, Switzerland</p>
+										<p><span class="key">role</span><span class="sep">::</span> Young software developer</p>
+										<p><span class="key">note</span><span class="sep">::</span> <em>No tech talk here — the rest of the site covers that.</em></p>
+								</div>
+						</div>
+
+						<div class="section-header">
+								<span class="prompt">~$</span> <span class="cmd">ls</span> <span class="arg">./hobbies/</span>
+						</div>
+
+						<div class="hobbies">
+
+								<div class="hobby-card">
+										<div class="hobby-icon">[cook]</div>
+										<div class="hobby-body">
+												<strong class="hobby-title">Cooking &amp; Spirits</strong>
+												<p>Traditional Italian infuses, liqueurs, and conserves. There is something deeply satisfying about turning raw ingredients into something you can share — or sip slowly.</p>
+										</div>
+								</div>
+
+								<div class="hobby-card">
+										<div class="hobby-icon">[ctrl]</div>
+										<div class="hobby-body">
+												<strong class="hobby-title">Videogames &amp; Tabletop</strong>
+												<p>Real-time strategy games and tabletop RPGs like DnD. Whether commanding armies on screen or rolling dice around a table, I love a good system to think through.</p>
+										</div>
+								</div>
+
+								<div class="hobby-card">
+										<div class="hobby-icon">[grow]</div>
+										<div class="hobby-body">
+												<strong class="hobby-title">Vegetable Garden</strong>
+												<p>Growing vegetables, herbs, and the occasional flower — with varying degrees of success. The failures are as educational as the harvests, and sometimes more interesting.</p>
+										</div>
+								</div>
+
+								<div class="hobby-card">
+										<div class="hobby-icon">[yarn]</div>
+										<div class="hobby-body">
+												<strong class="hobby-title">Crocheting &amp; Sewing</strong>
+												<p>Still a beginner, but already hooked. There is something meditative about working with your hands on something entirely analog. Very much a work in progress.</p>
+										</div>
+								</div>
+
+								<div class="hobby-card">
+										<div class="hobby-icon">[strm]</div>
+										<div class="hobby-body">
+												<strong class="hobby-title">Music &amp; Guitar</strong>
+												<p>Listening to music is a constant; playing guitar is the practice. Mostly enjoying the process more than the result ;)</p>
+										</div>
+								</div>
+
+						</div>
+				</div>
+				<footer>
+						<strong>contact me at:</strong>
+						<a href="mailto:info@ronik.ch"><span class="no-select">[</span>info@ronik.ch<span class="no-select">]</span></a>
+						<a href="https://www.github.com/ronik-dev"><span class="no-select">[</span>github.com/ronik-dev<span class="no-select">]</span></a>
+						<a href="https://www.linkedin.com/in/nicola-romano-351461385"><span class="no-select">[</span><span class="link-prefix">linkedin.com/in/</span>nicola-romano-351461385<span class="no-select">]</span></a>
+				</footer>
+
+				<script>
+						// Hide header and footer specifically when embedded in an iframe
+						if (window.self !== window.top) {
+								const header = document.querySelector('header');
+								const footer = document.querySelector('footer');
+								if (header) header.style.display = 'none';
+								if (footer) footer.style.display = 'none';
+
+								// Reset body grid to take up full space
+								document.body.style.gridTemplateRows = '1fr';
+								document.body.style.height = '100vh';
+						}
+						// Eventlistener for click event
+						window.addEventListener('click', () => {
+								// Send a message to the parent window
+								window.parent.postMessage('triggerLink', '*');
+						});
+				</script>
+</html>
