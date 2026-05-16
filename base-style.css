@@ -177,7 +177,16 @@ html.light-theme body {
     gap: 1.5em;
   }
   footer strong { display: none; }
-  footer a { margin-right: 0; }
+  footer a {
+    margin-right: 0;
+    width: fit-content;    
+    display: flex;
+    align-items: center;
+  }
   .link-text { display: none; }
-  .link-icon { display: block; }
+  .link-icon {
+    display: block;
+    width: 20px;          
+    height: 20px;
+  }
 }
